@@ -50,15 +50,6 @@ public class EndUserCommands {
     }
     
     @RegisterCommand(
-            permission = "swisscheese.command.kill",
-            description = "Sets your health to 0, hopefully killing you.",
-            override = true
-    )
-    public void kill(Invoker invoker){
-        invoker.as(Player.class).setHealth(0D);
-    }
-    
-    @RegisterCommand(
             permission = "swisscheese.command.hat",
             description = "Places the item in-hand on your head."
     )

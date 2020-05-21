@@ -17,7 +17,6 @@ public class SwissCheesePlugin extends TenkorePlugin {
         FrontDoor.load(ActionCommands.class);
         SaddleModule saddle = FrontDoor.load(SaddleModule.class);
     
-        Bukkit.getPluginManager().registerEvents(new TabColor(), (JavaPlugin)getCore());
         Bukkit.getPluginManager().registerEvents(new ChatMemeListener(), (JavaPlugin)getCore());
         Bukkit.getPluginManager().registerEvents(saddle, (JavaPlugin)getCore());
     
