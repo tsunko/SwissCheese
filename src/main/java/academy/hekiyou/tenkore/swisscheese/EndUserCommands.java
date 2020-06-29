@@ -104,8 +104,8 @@ public class EndUserCommands {
     }
     
     @RegisterCommand(
-            permission = "swisscheese.command.slap",
-            description = "Slaps a player"
+            permission = "swisscheese.command.rocket",
+            description = "Rockets a player"
     )
     public void rocket(Invoker invoker,
                      Player target,
