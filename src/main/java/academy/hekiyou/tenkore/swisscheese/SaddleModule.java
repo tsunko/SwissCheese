@@ -55,11 +55,10 @@ public class SaddleModule implements Listener {
     public void nearbyEntities(Invoker invoker, @OptionalInteger(5) int range){
         Player player = invoker.as(Player.class);
         StringBuilder builder = new StringBuilder(ChatColor.YELLOW.toString());
-        for(Entity entity : player.getNearbyEntities(range, range, range))
-            builder.append(entity.getEntityId()).append(" (").append(entity.getType()).append("), ");
-        
-        String result = builder.toString();
-        if(!result.isEmpty()){
+        List<Entity> nearby = player.getNearbyEntities(range, range, range);
+        if(!nearby.isEmpty()){
+            for(Entity entity : nearby)
+                builder.append(entity.getEntityId()).append(" (").append(entity.getType()).append("), ");
             player.sendMessage(builder.substring(0, builder.length() - 2));
         } else {
             player.sendMessage(ChatColor.RED + "There isn't any entities nearby you");
